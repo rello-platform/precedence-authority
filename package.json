@@ -1,6 +1,6 @@
 {
   "name": "@rello-platform/precedence-authority",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Pure-function precedence-authority comparator for the Rello nurture stack — evaluatePrecedence() decides whether a goal-shift-bearing signal preempts an active campaign for a lead. Single source of truth for the 13-arm outcome cascade (lock-tier exemptions, signal-quality gates, goal comparison) consumed by Rello's signal-driven enrollEligibleCampaigns connector.",
   "type": "module",
   "main": "dist/index.js",
@@ -8,7 +8,9 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "default": "./dist/index.js"
     }
   },
   "files": [
