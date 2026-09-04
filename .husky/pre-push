@@ -45,4 +45,4 @@ if ! printf '%s\n' "$_refs" | grep -q 'refs/tags/'; then
   exit 0
 fi
 
-printf '%s\n' "$_refs" | npx --yes "github:rello-platform/scripts#v0.8.0" tag-dist-gate
+printf '%s\n' "$_refs" | npx --yes "github:rello-platform/scripts#v0.10.0" tag-dist-gate
