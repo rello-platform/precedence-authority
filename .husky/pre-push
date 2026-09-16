@@ -45,7 +45,7 @@ if ! printf '%s\n' "$_refs" | grep -q 'refs/tags/'; then
   exit 0
 fi
 
-printf '%s\n' "$_refs" | npx --yes "github:rello-platform/scripts#v0.10.0" tag-dist-gate
+printf '%s\n' "$_refs" | npx --yes "github:rello-platform/scripts#v0.20.0" tag-dist-gate
 
 # ── lockfile git+ssh gate ────────────────────────────────────────────────────
 # WHY THIS IS WIRED DIRECTLY. The shared implementation has existed since
@@ -61,4 +61,4 @@ printf '%s\n' "$_refs" | npx --yes "github:rello-platform/scripts#v0.10.0" tag-d
 #
 # Requires exit 0. Offenders (exit 1) block; an unparseable lockfile (exit 2)
 # blocks too — "could not tell" is not "fine". No `|| true`.
-npx --yes "github:rello-platform/scripts#v0.10.0" check-lockfile-ssh
+npx --yes "github:rello-platform/scripts#v0.20.0" check-lockfile-ssh
