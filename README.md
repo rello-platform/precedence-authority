@@ -68,3 +68,7 @@ switch (decision.outcome) {
 - `0.1.0` — initial publish; 13-arm comparator + DEFAULT_PRECEDENCE_AUTHORITY_POLICY + policyDigest. Per NURTURE-PRECEDENCE-AUTHORITY-SPEC-260520 Wave 1 + DECISIONS-260519 D11-CORRECTED Hole 1/2/3 amendments. Consumed by Rello Wave 2 `enrollEligibleCampaigns` connector.
 
 Follow `github:rello-platform/precedence-authority#vX.Y.Z` tag-based consumption.
+
+## Contributor setup
+
+After cloning, run `npm run hooks` once to wire the husky hooks (`core.hooksPath .husky`). This used to be the `prepare` script; C-33 (2026-09-16) moved it off the `prepare` name because npm runs a nested, lockfile-less install inside every git dependency whose manifest carries `prepare` (or `build`), and one such install failed two app builds on a registry blip.
